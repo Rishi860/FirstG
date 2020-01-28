@@ -1,0 +1,40 @@
+node js
+
+asynchronous (non-blocking)
+can take multiple request. // like in a restraunt waiter can take multiple orders and cam serve them at different time
+node take request to the server but dont wait for the execution of it, instead go ahead for another request but for the time being when our data is ready it is sent into EVENT QUEUE and after the thread is free from the request it comes back to the queue and take the data to the user.
+
+
+
+we define module as the thing we can not access outside it(file) so that in real life when create complex files we dont have to deal with case of clashing between the variables.
+we can still make variable accessible to other module we use export as it is a empty object present in module object.
+in node we can export a object as well as a funtion.
+
+node never execute our module directly it uses a "function (exports, require, module, __filename, __dirname)"
+  it is called as module wrapper function 
+
+TEMPLATE STRING new feature of java script 
+`` uses this to concatinate string and for adding a variable just do "`${variableName}`";
+
+for working with files and directories in node we need to use (fs) module and use one of the methods either synchronus or asynchronus
+
+in async we have to declare a function as a paramter in the end which is called a callback function it contains two parameters.
+ 
+
+CLASs it is a container of various functions and properties 
+
+for example class is a human and its instance that is a object is (lest say me)[Rishi].
+const EventEmitter = require('events'); // This is a class variable name capital letters.
+const emitter = new EventEmitter(); // This is a instance of the class or an object.
+
+emitter has many methods now as it is a part of events.
+
+emitter.emit('messageLogged'); // Making a noise, produce a signal. messageLogged is the name of the event (parameter)
+
+now there should be a listener to catch the signal expelled.
+
+emitter.on('messageLogged', function(){ // NOW for this we need to place our listener above our emitter cauz once signal is send it starts running sync so starts from begining and then reach the listnere.
+console.log('Got that message');
+});
+
+  
